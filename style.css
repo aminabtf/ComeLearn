@@ -33,7 +33,7 @@ header {
     display: flex;
 }
 .logo {
-    color: #27ae60;
+    color: #278cae;
     font-weight: 700;
     font-size: 25px;
 }
@@ -58,7 +58,7 @@ header {
     width: 0;
     height: 2px;
     border-radius: 6px;
-    background-color: #27ae60;
+    background-color: #278cae;
     transition: 0.5s;
 }
 .menu li a:hover::before {
@@ -72,7 +72,7 @@ header {
     width: 0;
     height: 2px;
     border-radius: 6px;
-    background-color: #27ae60;
+    background-color: #278cae;
     transition: 0.5s;
 }
 .menu li a:hover::after {
@@ -101,7 +101,7 @@ header {
 }
 #home .left h4 {
     font-size: 20px;
-    color: #27ae60;
+    color: #278cae;
 }
 #home .left h1 {
     font-size: 40px;
@@ -135,7 +135,7 @@ header {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-color: #27ae60;
+    background-color: #278cae;
 }
 #home .left button:hover a{
    letter-spacing: 1px;
@@ -174,7 +174,7 @@ header {
 .mini_title {
     margin-top: 25px;
     font-size: 16px;
-    color: #27ae60;
+    color: #278cae;
     text-transform: capitalize;
 }
 .title {
@@ -219,7 +219,7 @@ header {
     margin-top: 10px;
     font-size: 14px;
     text-decoration: 0;
-    background-color: #27ae60;
+    background-color: #278cae;
     padding: 5px 60px;
     color: #fff;
     border-radius: 6px;
@@ -229,7 +229,7 @@ header {
     width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #27ae60;
+    background-color: #278cae;
 }
 
 /* about us CSS */
@@ -274,7 +274,7 @@ header {
 .about .right button {
     margin: 20px 0;
     padding: 5px 60px;
-    background-color: #27ae60;
+    background-color: #278cae;
     border: 0;
 }
 .about .right button a{
@@ -309,7 +309,7 @@ header {
 .comments  .comment div img {
    width: 45px;
    height: 45px;
-   border: 2px solid #27ae60;
+   border: 2px solid #278cae;
    border-radius: 50%;
 }
 .comments  .comment {
@@ -357,13 +357,13 @@ header {
    outline: 0;
 }
 #reservation form input:focus {
-    outline: 1px solid #27ae60;
+    outline: 1px solid #278cae;
 }
 #reservation form input[type="submit"]{
     margin-top: 15px;
     color: #fff;
-    background-color: #27ae60;
-    border: 1px solid #27ae60;
+    background-color: #278cae;
+    border: 1px solid #278cae;
 }
 
 /* footer CSS */
@@ -380,7 +380,7 @@ footer .services_list {
 }
 .service img {
     width: 40px;
-    background-color: #27ae60;
+    background-color: #278cae;
     padding: 10px;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -408,7 +408,7 @@ hr {
     padding: 8px 0;
 }
 .footer_text span {
-    color: #27ae60;
+    color: #278cae;
 }
 .toggle_menu {
     display: none;
@@ -494,22 +494,22 @@ hr {
         content: "";
         height: 3px;
         width: 28px;
-        background-color: #27ae60;
+        background-color: #278cae;
         border-radius: 6px;
-        box-shadow: 0 10px 0 #27ae60;
+        box-shadow: 0 10px 0 #278cae;
         transform: translateY(-10px);
         transition: 0.5s;
     }
     .toggle_menu.active::before {
         transform: translateY(0) rotate(135deg);
-        box-shadow: 0 0 0 #27ae60
+        box-shadow: 0 0 0 #278cae
     }
     .toggle_menu::after {
         position: absolute;
         content: "";
         height: 3px;
         width: 28px;
-        background-color: #27ae60;
+        background-color: #278cae;
         border-radius: 6px;
         transform: translateY(10px);
         transition: 0.5s;
