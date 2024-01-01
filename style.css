@@ -225,6 +225,7 @@ header {
     border-radius: 6px;
 }
 /*Scrollbar CSS*/
+
 ::-webkit-scrollbar {
     width: 8px;
 }
