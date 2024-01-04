@@ -1,79 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Formation des Enseignants - Leadership Pédagogique</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-header {
-    background-color: #4caf50;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-}
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <title>Formation des Enseignants - Éducation Socio-émotionnelle</title>
+  </head>
 
-section {
-    margin: 20px;
-}
-
-h2 {
-    color: #4caf50;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-    </style>
-</head>
-<body>
-
+  <body>
     <header>
-        <h1>Formation des Enseignants</h1>
-        <p>Leadership Pédagogique</p>
+      <div class="logo">
+        <p><span>Come</span>Learn</p>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="index.html#menu">Formations</a></li>
+        <li><a href="index.html#about_us">A Propos</a></li>
+      </ul>
+
+      <!-- menu responsive -->
+      <div class="toggle_menu"></div>
     </header>
 
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>Bienvenue à notre programme de formation sur le leadership pédagogique. Cette formation vise à...</p>
+    <!-- section info -->
+
+    <section id="info">
+      <div class="top text-center mx-auto pt-5 mt-5 img-fluid w-25">
+        <img src="images/image2.jpg" class="w-30 pt-5 my-5" />
+      </div>
+
+      <div class="center text-center px-5">
+        <h1 class="display-3 fw-bolder">Leadership Pédagogique</h1>
+        <div class="container px-5 mx-auto w-75">
+          <p class="px-5 mx-5 fs-5">
+            Bienvenue à notre programme de formation sur le leadership
+            pédagogique. Cette formation vise à...
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="fs-3 text-decoration-none d-flex align-items-center justify-content-center"
+          ><i class="bi bi-youtube" style="font-size: 3rem"></i>
+          <span class="ps-2">Visionner</span>
+        </a>
+      </div>
     </section>
 
-    <section id="modules">
-        <h2>Modules de Formation</h2>
-        <ul>
-            <li>Module 1: Principes du Leadership Pédagogique</li>
-            <li>Module 2: Communication et Collaboration</li>
-            <li>Module 3: Gestion de Classe et Leadership</li>
-            <!-- Ajoutez d'autres modules selon vos besoins -->
-        </ul>
+    <!-- section  Module -->
+    <section class="bg-body-secondary p-5 mb-5">
+      <h4 class="mini_title text-center">Modules</h4>
+      <h2 class="title">Découvrez les ....</h2>
+
+      <div class="row pb-5 d-flex justify-content-center py-5">
+        <div
+          class="card mb-4 col-md-4 px-5 py-3 video-card"
+          style="width: 30rem"
+        >
+          <div class="card-body">
+            <a href="#" class="text-decoration-none">
+              <i class="bi bi-youtube" style="font-size: 3rem"></i>
+              <div class="row">
+                <h1 class="col-md-3">1</h1>
+                <p class="col-md-8 fs-5 text-dark">
+                  Principes du Leadership Pédagogique
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="card mb-4 col-md-4 px-5 py-3 mx-5 video-card"
+          style="width: 30rem"
+        >
+          <div class="card-body">
+            <a href="#" class="text-decoration-none">
+              <i class="bi bi-youtube" style="font-size: 3rem"></i>
+              <div class="row">
+                <h1 class="col-md-3">2</h1>
+                <p class="col-md-8 fs-5 text-dark">
+                  Communication et Collaboration
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+        <div
+          class="card mb-4 col-md-4 px-5 py-3 video-card"
+          style="width: 30rem"
+        >
+          <div class="card-body">
+            <a href="#" class="text-decoration-none">
+              <i class="bi bi-youtube" style="font-size: 3rem"></i>
+              <div class="row">
+                <h1 class="col-md-3">3</h1>
+                <p class="col-md-8 fs-5 text-dark">
+                  Gestion de Classe et Leadership
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="inscription">
-        <h2>Inscription</h2>
-        <p>Pour participer à la formation, veuillez remplir le formulaire d'inscription <a href="inscription.html">ici</a>.</p>
-    </section>
-
+    <!-- footer -->
     <footer>
-        <p>&copy; 2023 Formation des Enseignants - Leadership Pédagogique</p>
-    </footer>
+      <div class="services_list">
+        <div class="service">
+          <img src="images/email.png" alt="" />
+          <h2>Emails</h2>
+          <p>ComeLearn@gmail.com</p>
+          <p>FirstFlame@gmail.com</p>
+        </div>
+        <div class="service">
+          <img src="images/call.png" alt="" />
+          <h2>Numbers</h2>
+          <p>+212 0000000</p>
+          <p>+212 0000000</p>
+        </div>
 
-</body>
+        <hr />
+      </div>
+
+      <p class="footer_text">
+        Réalisé par <span>First Flame</span> | Tous les droits sont réservés.
+      </p>
+    </footer>
+  </body>
 </html>

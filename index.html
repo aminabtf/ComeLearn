@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ton site de formation</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -16,7 +31,6 @@
         <li><a href="#home">Acceuil</a></li>
         <li><a href="#menu">Formations</a></li>
         <li><a href="#about_us">A Propos</a></li>
-        <li><a href="#reservation">Réservation</a></li>
       </ul>
 
       <!-- menu responsive -->
@@ -52,19 +66,45 @@
         <div class="dish">
           <img src="images/image1.jpg" />
           <p>Intégration des Technologies en Classe</p>
+          <p class="fs-5">Gratuite</p>
           <!-- <h2>$65.99</h2> -->
-          <a href="intégration.html">consulter</a>
+          <a href="integration.html">consulter</a>
         </div>
         <div class="dish">
           <img src="images/image2.jpg" />
           <p>Leadership Pédagogique</p>
+
           <br /><br />
+          <p class="fs-5">Gratuite</p>
           <!-- <h2>$65.99</h2> -->
           <a href="leadership.html">consulter</a>
         </div>
         <div class="dish">
           <img src="images/image3.jpg" />
           <p>L'éducation Socio-émotionnelle</p>
+          <p class="fs-5">Gratuite</p>
+          <!-- <h2>$65.99</h2> -->
+          <a href="educSocioemot.html">consulter</a>
+        </div>
+        <div class="dish">
+          <img src="images/image1.jpg" />
+          <p>Formation 4</p>
+          <p class="fs-4">$65.99</p>
+          <!-- <h2>$65.99</h2> -->
+          <a href="integration.html">consulter</a>
+        </div>
+        <div class="dish">
+          <img src="images/image2.jpg" />
+          <p>Formation 5</p>
+          <p class="fs-4">$65.99</p>
+
+          <!-- <h2>$65.99</h2> -->
+          <a href="leadership.html">consulter</a>
+        </div>
+        <div class="dish">
+          <img src="images/image3.jpg" />
+          <p>LFormation 6</p>
+          <p class="fs-4">$65.99</p>
           <!-- <h2>$65.99</h2> -->
           <a href="educSocioemot.html">consulter</a>
         </div>
@@ -72,73 +112,29 @@
     </section>
 
     <!-- section about us -->
-
     <section id="about_us">
-      <h4 class="mini_title">About Us</h4>
-      <h2 class="title">Why choose us ?</h2>
+      <h4 class="mini_title">À Propos</h4>
+      <h2 class="title">Pourquoi nous choisir ?</h2>
       <div class="about">
         <div class="left">
-          <img src="images/img-about-us.png" />
+          <img src="images/aboutus.jfif" alt="À Propos de ComeLearn" />
         </div>
         <div class="right">
-          <h3>Best Food in The Word</h3>
+          <h3>Des Formations de Qualité Supérieure</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae est,
-            iure culpa ipsa tempora explicabo ullam similique? Ipsum, est,
-            beatae adipisci autem dolores, dolore eveniet mollitia quibusdam
-            eius provident fugiat!
+            Chez ComeLearn, nous nous engageons à offrir aux enseignants les
+            meilleures formations en ligne. Notre équipe d'experts pédagogiques
+            conçoit des cours stimulants et pertinents pour vous aider à
+            exceller dans votre domaine.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            ipsa non quis pariatur enim fugit ratione. Unde maiores veritatis
-            eaque accusamus minus sunt, eligendi nisi officiis quis vitae
-            dignissimos officia.
+            Nous comprenons les défis auxquels les enseignants sont confrontés
+            aujourd'hui, c'est pourquoi nos formations sont spécialement conçues
+            pour répondre à vos besoins. Que vous cherchiez à maîtriser de
+            nouvelles technologies éducatives ou à perfectionner vos compétences
+            pédagogiques, ComeLearn est là pour vous accompagner.
           </p>
-          <button><a href="#">Learn More</a></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- section comments -->
-    <section class="comment_section">
-      <h4 class="mini_title">Comments</h4>
-      <h2 class="title">What People this about us</h2>
-      <div class="comments">
-        <div class="comment">
-          <div>
-            <img src="images/img1.png" />
-            <h4>Smith Johnson</h4>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sequi
-            repellat. Velit, temporibus! Repellat velit delectus vero suscipit
-            ut, consequatur atque molestias obcaecati tenetur dignissimos! Eius
-            eos reprehenderit aspernatur molestiae?
-          </p>
-        </div>
-        <div class="comment">
-          <div>
-            <img src="images/img1.png" />
-            <h4>Smith Johnson</h4>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sequi
-            repellat. Velit, temporibus! Repellat velit delectus vero suscipit
-            ut, consequatur atque molestias obcaecati tenetur dignissimos! Eius
-            eos reprehenderit aspernatur molestiae?
-          </p>
-        </div>
-        <div class="comment">
-          <div>
-            <img src="images/img1.png" />
-            <h4>Smith Johnson</h4>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sequi
-            repellat. Velit, temporibus! Repellat velit delectus vero suscipit
-            ut, consequatur atque molestias obcaecati tenetur dignissimos! Eius
-            eos reprehenderit aspernatur molestiae?
-          </p>
+          <button><a href="#">En savoir plus</a></button>
         </div>
       </div>
     </section>
@@ -149,14 +145,14 @@
         <div class="service">
           <img src="images/email.png" alt="" />
           <h2>Emails</h2>
-          <p>email@gmail.com</p>
-          <p>your.dish@gmail.com</p>
+          <p>ComeLearn@gmail.com</p>
+          <p>FirstFlame@gmail.com</p>
         </div>
         <div class="service">
           <img src="images/call.png" alt="" />
           <h2>Numbers</h2>
-          <p>+33 54454544</p>
-          <p>+33 45687515</p>
+          <p>+212 0000000</p>
+          <p>+212 0000000</p>
         </div>
 
         <hr />
