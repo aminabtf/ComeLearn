@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google ClassRoom</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -12,10 +29,9 @@
         <p><span>Come</span>Learn</p>
       </div>
       <ul class="menu">
-        <li><a href="#home">Acceuil</a></li>
-        <li><a href="#menu">Formations</a></li>
-        <li><a href="#about_us">A Propos</a></li>
-        <li><a href="#reservation">Réservation</a></li>
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="index.html#menu">Formations</a></li>
+        <li><a href="index.html#about_us">A Propos</a></li>
       </ul>
 
       <!-- menu responsive -->
@@ -24,21 +40,437 @@
     <!-- section info -->
 
     <section id="info">
-      <div class="top">
-        <img src="images/classroom.jpg" />
+      <div class="top text-center mx-auto pt-5 mt-5 img-fluid w-25">
+        <img src="images/Google_Classroom_Logo.png" class="w-25 pt-5 my-5" />
       </div>
 
-      <div class="center">
-        <h1>Premiers pas avec Google Classroom</h1>
-        <p>
-          Découvrez comment utiliser Classroom pour gérer les travaux en classe,
-          organiser les devoirs, renforcer la collaboration et améliorer la
-          communication. Lancez-vous dès aujourd'hui grâce aux ressources, aux
-          conseils et aux astuces de notre communauté d'enseignants.
-        </p>
+      <div class="center text-center px-5">
+        <h1 class="display-3 fw-bolder">Premiers pas avec Google Classroom</h1>
+        <div class="container px-5 mx-auto w-75">
+          <p class="px-5 mx-5 fs-5">
+            Découvrez comment utiliser Classroom pour gérer les travaux en
+            classe, organiser les devoirs, renforcer la collaboration et
+            améliorer la communication. Lancez-vous dès aujourd'hui grâce aux
+            ressources, aux conseils et aux astuces de notre communauté
+            d'enseignants.
+          </p>
+        </div>
 
-        <button><a href="#">visionner</a></button>
+        <a
+          href="#"
+          class="fs-3 text-decoration-none d-flex align-items-center justify-content-center"
+          ><i class="bi bi-youtube" style="font-size: 3rem"></i>
+          <span class="ps-2">Visionner</span>
+        </a>
       </div>
     </section>
+
+    <!-- section  start -->
+
+    <section class="bg-body-secondary p-5 mb-5">
+      <h4 class="mini_title text-center">MISE EN ROUTE</h4>
+      <h2 class="title">Regardez de courtes vidéos pour démarrer</h2>
+      <div class="row pb-5 d-flex align-items-center">
+        <div class="col-md-4">
+          <h1 class="pb-3">Explorer les rubriques une par une</h1>
+          <div id="list-example" class="list-group fs-4">
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(1)"
+            >
+              Qu'est-ce que Google Classroom ?
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(2)"
+            >
+              Accéder à Google Classroom
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(3)"
+            >
+              Ajouter des élèves à une classe
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(4)"
+            >
+              Afficher la page "Flux"
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(5)"
+            >
+              Afficher la page "Travaux et devoirs"
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(5)"
+            >
+              Afficher la page "Participants"
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(5)"
+            >
+              Créer des devoirs
+            </button>
+            <button
+              class="list-group-item list-group-item-action py-3"
+              onclick="changeVideo(5)"
+            >
+              Envoyer des commentaires et noter les élèves
+            </button>
+          </div>
+        </div>
+        <div class="col-md-8" id="videoToShow">
+          <video
+            src="./videos/video1.mp4"
+            width="100%"
+            height="100%"
+            controls
+          ></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- section  salle prof -->
+    <section class="p-5 mb-5">
+      <h4 class="mini_title text-center">SALLE DES PROFESSEURS</h4>
+      <h2 class="title">
+        Découvrez les conseils et les astuces de vos confrères
+      </h2>
+      <div class="container px-5 mx-auto w-75">
+        <p class="px-5 mx-5 fs-5 text-center">
+          Exploitez pleinement Google Classroom grâce à ces conseils simples
+          provenant de confrères enseignants. Présentation des modules
+          complémentaires Google Classroom Utiliser les rapports sur le degré
+          d'origine
+        </p>
+      </div>
+
+      <div class="row pb-5 d-flex justify-content-center py-5">
+        <div
+          class="card mb-4 col-md-4 px-5 py-3 video-card"
+          style="width: 30rem"
+        >
+          <div class="card-body">
+            <a href="#" class="text-decoration-none">
+              <i class="bi bi-youtube" style="font-size: 3rem"></i>
+              <p class="card-text fs-5 text-dark">
+                Présentation des modules complémentaires Google Classroom
+              </p>
+            </a>
+          </div>
+        </div>
+        <div
+          class="card mb-4 col-md-4 px-5 py-3 mx-5 video-card"
+          style="width: 30rem"
+        >
+          <div class="card-body">
+            <a href="#" class="text-decoration-none">
+              <i class="bi bi-youtube" style="font-size: 3rem"></i>
+              <p class="card-text fs-5 text-dark">
+                Utiliser les rapports sur le degré d'originalité
+              </p></a
+            >
+          </div>
+        </div>
+        <div
+          class="card mb-4 col-md-4 px-5 py-3 video-card"
+          style="width: 30rem"
+        >
+          <div class="card-body">
+            <a href="#" class="text-decoration-none">
+              <i class="bi bi-youtube" style="font-size: 3rem"></i>
+              <p class="card-text fs-5 text-dark">Copier un cours</p></a
+            >
+          </div>
+        </div>
+        <div class="row pb-5 d-flex justify-content-center py-5">
+          <div
+            class="card mb-4 col-md-4 px-5 py-3 mx-5 video-card"
+            style="width: 30rem"
+          >
+            <div class="card-body">
+              <a href="#" class="text-decoration-none">
+                <i class="bi bi-youtube" style="font-size: 3rem"></i>
+                <p class="card-text fs-5 text-dark">
+                  Présentation des modules complémentaires Google Classroom
+                </p>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card mb-4 col-md-4 px-5 py-3 mx-5 video-card"
+            style="width: 30rem"
+          >
+            <div class="card-body">
+              <a href="#" class="text-decoration-none">
+                <i class="bi bi-youtube" style="font-size: 3rem"></i>
+                <p class="card-text fs-5 text-dark">
+                  Utiliser les rapports sur le degré d'originalité
+                </p></a
+              >
+            </div>
+          </div>
+          <div
+            class="card mb-4 col-md-4 px-5 py-3 video-card"
+            style="width: 30rem"
+          >
+            <div class="card-body">
+              <a href="#" class="text-decoration-none">
+                <i class="bi bi-youtube" style="font-size: 3rem"></i>
+                <p class="card-text fs-5 text-dark">Copier un cours</p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <button
+        id="loadmore"
+        type="button"
+        class="btn fs-4 text-secondary mx-auto d-grid gap-2 bg-info-subtle"
+      >
+        Afficher toutes les vidéos
+      </button>
+    </section>
+
+    <!-- section  EXPLORER LES COURS -->
+    <section class="bg-body-secondary p-5 mb-5">
+      <h4 class="mini_title text-center">
+        EXPLORER LES COURS DE FORMATION ET LES RESSOURCES
+      </h4>
+      <h2 class="title">
+        Découvrez des formations et des ressources associées pour accélérer
+        votre apprentissage.
+      </h2>
+
+      <div class="row pb-5 d-flex justify-content-center py-5">
+        <div class="card mb-4 col-md-4 px-5 py-3" style="width: 30rem">
+          <div class="card-body">
+            <a
+              href="https://support.google.com/edu/classroom/answer/12351654?visit_id=637940381907840281-1631459481&p=add_ons_admins&rd=1"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-card-list" style="font-size: 3rem"></i>
+              <h5 class="py-3">TUTORIEL</h5>
+              <p class="card-text fs-5 text-dark">
+                Installer des modules complémentaires Classroom et les ajouter à
+                la liste d'autorisation
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="card mb-4 col-md-4 px-5 py-3 mx-5" style="width: 30rem">
+          <div class="card-body">
+            <a
+              href="https://skillshop.exceedlms.com/student/path/61209/activity/81944#/page/626072d05c553f0ac1d3f660"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-bookmarks" style="font-size: 3rem"></i>
+              <h5 class="py-3">FORMATION SUR LES FONDAMENTAUX</h5>
+              <p class="card-text fs-5 text-dark">
+                Passer au tout numérique (ou presque) dans la classe
+              </p>
+              <div class="row d-flex align-items-center">
+                <i
+                  class="bi bi-clock-history col-md-3"
+                  style="font-size: 2rem"
+                ></i>
+                <p class="col-md-6 fs-4">45 minutes</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="card mb-4 col-md-4 px-5 py-3" style="width: 30rem">
+          <div class="card-body">
+            <a
+              href="https://skillshop.exceedlms.com/student/path/61209/activity/81968#/page/626074a9e6addd0ca0d3519c"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-bookmarks" style="font-size: 3rem"></i>
+              <h5 class="py-3">FORMATION SUR LES FONDAMENTAUX</h5>
+              <p class="card-text fs-5 text-dark">
+                Amener les élèves à travailler en ligne
+              </p>
+              <div class="row d-flex align-items-center">
+                <i
+                  class="bi bi-clock-history col-md-3"
+                  style="font-size: 2rem"
+                ></i>
+                <p class="col-md-6 fs-4">85 minutes</p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row pb-5 d-flex justify-content-center py-5">
+        <div class="card mb-4 col-md-4 px-5 py-3" style="width: 30rem">
+          <div class="card-body">
+            <a
+              href="https://skillshop.exceedlms.com/student/path/61210/activity/82037#/page/6261471f7149920c68a13447"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-bookmarks" style="font-size: 3rem"></i>
+              <h5 class="py-3">FORMATION AVANCÉE</h5>
+              <p class="card-text fs-5 text-dark">
+                Analyser et interpréter les données des élèves
+              </p>
+              <div class="row d-flex align-items-center">
+                <i
+                  class="bi bi-clock-history col-md-3"
+                  style="font-size: 2rem"
+                ></i>
+                <p class="col-md-6 fs-4">51 minutes</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="card mb-4 col-md-4 px-5 py-3 mx-5" style="width: 30rem">
+          <div class="card-body">
+            <a
+              href="https://skillshop.exceedlms.com/student/path/61210/activity/265010#/page/6260b482bdf3720f852a4c97"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-bookmarks" style="font-size: 3rem"></i>
+              <h5 class="py-3">FORMATION AVANCÉE</h5>
+              <p class="card-text fs-5 text-dark">
+                Donner la parole aux élèves
+              </p>
+              <div class="row d-flex align-items-center">
+                <i
+                  class="bi bi-clock-history col-md-3"
+                  style="font-size: 2rem"
+                ></i>
+                <p class="col-md-6 fs-4">85 minutes</p>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="card mb-4 col-md-4 px-5 py-3" style="width: 30rem">
+          <div class="card-body">
+            <a
+              href="https://skillshop.exceedlms.com/student/path/61210/activity/265010#/page/6260b482bdf3720f852a4c97"
+              class="text-decoration-none"
+            >
+              <i class="bi bi-bookmarks" style="font-size: 3rem"></i>
+              <h5 class="py-3">FORMATION AVANCÉE</h5>
+              <p class="card-text fs-5 text-dark">Student Agency</p>
+              <div class="row d-flex align-items-center">
+                <i
+                  class="bi bi-clock-history col-md-3"
+                  style="font-size: 2rem"
+                ></i>
+                <p class="col-md-6 fs-4">55 minutes</p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section  premier-pas-->
+    <section class="bg-body-secondary p-3 mb-5 col-md-8 mx-auto">
+      <div class="row d-flex justify-content-center p-5 m-5">
+        <div class="col-md-6">
+          <h4 class="mini_title text-center">PREMIERS PAS</h4>
+          <h2 class="title">Plongez-vous dans Google Classroom</h2>
+          <di>
+            <p class="fs-4">
+              Vous utilisez déjà Google Workspace ? Connectez-vous à Classroom
+              pour découvrir ses fonctionnalités et tout son potentiel.
+            </p>
+          </di>
+          <button
+            type="button"
+            class="btn fs-4 text-secondary mx-auto bg-info-subtle"
+          >
+            Accéder à Classroom
+          </button>
+        </div>
+        <div class="col-md-6 my-auto">
+          <div>
+            <p class="fs-4">
+              Consulter notre centre d'aide pour plus d'informations
+            </p>
+            <a
+              href="https://support.google.com/edu/classroom/?hl=fr#topic=10298088"
+              class="fs-5"
+              >Obtenir de l'aide
+            </a>
+          </div>
+          <div class="pt-5">
+            <p class="fs-4">
+              Découvrez comment Classroom peut transformer votre façon de gérer,
+              d'organiser et d'enrichir le programme.
+            </p>
+            <a
+              href="https://edu.google.com/intl/ALL_fr/workspace-for-education/classroom/"
+              class="fs-5"
+            >
+              En savoir plus</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="services_list">
+        <div class="service">
+          <img src="images/email.png" alt="" />
+          <h2>Emails</h2>
+          <p>ComeLearn@gmail.com</p>
+          <p>FirstFlame@gmail.com</p>
+        </div>
+        <div class="service">
+          <img src="images/call.png" alt="" />
+          <h2>Numbers</h2>
+          <p>+212 0000000</p>
+          <p>+212 0000000</p>
+        </div>
+
+        <hr />
+      </div>
+
+      <p class="footer_text">
+        Réalisé par <span>First Flame</span> | Tous les droits sont réservés.
+      </p>
+    </footer>
   </body>
+
+  <script>
+    function changeVideo(n) {
+      document.getElementById("videoToShow").innerHTML =
+        '<video src="./videos/video' +
+        n +
+        '.mp4"  ' +
+        ' width="100%" ' +
+        ' height="100%" ' +
+        "controls ></video>";
+    }
+    $(document).ready(function () {
+      // Define the number of cards to show per click
+      var cardsToShow = 3;
+
+      // Initially hide all video cards except the first three
+      $(".video-card:gt(" + (cardsToShow - 1) + ")").hide();
+
+      // When the "Load More" button is clicked
+      $("#loadmore").click(function () {
+        // Show the next set of three hidden video cards
+        $(".video-card:hidden:lt(" + cardsToShow + ")").slideDown();
+
+        // Check if all video cards have been loaded
+        if ($(".video-card:hidden").length === 0) {
+          // Hide the "Load More" button by setting style attribute
+          $("#loadmore").remove();
+        }
+      });
+    });
+  </script>
 </html>

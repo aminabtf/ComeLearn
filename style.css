@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif; 
 }
 section {
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 body {
     position: relative;
@@ -225,6 +225,7 @@ header {
     border-radius: 6px;
 }
 /*Scrollbar CSS*/
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -281,89 +282,6 @@ header {
     color: #fff;
     text-decoration: 0;
     font-weight: bolder;
-}
-
-
-/* comment section CSS */
-
-.comment_section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 50px);
-    flex-direction: column;
-    padding: 0 10%;
-}
-
-.comments {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.comments  .comment div {
-   display: flex;
-   align-items: center;
-   margin-bottom: 10px;
-}
-.comments  .comment div img {
-   width: 45px;
-   height: 45px;
-   border: 2px solid #278cae;
-   border-radius: 50%;
-}
-.comments  .comment {
-    width: 30%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 20px;
-}
-.comments  .comment div h4 {
-    margin-left: 15px;
-    font-size: 14px;
-    color: #273e60;
-}
-.comments  .comment p {
-    font-size: 13px;
-    color: #999;
-}
-/* reservation CSS */
-
-#reservation {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
-}
-#reservation form {
-    display: flex;
-    background-color: rgba(0,0,0,0.05);
-    padding: 25px;
-    border-radius: 6px;
-    flex-direction: column;
-    width: 350px;
-}
-#reservation form  label {
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-#reservation form input {
-    margin-bottom: 10px;
-   padding: 5px;
-   border: 1px solid transparent;
-   box-shadow: 0 0 10px rgba(0,0,0,0.05);
-   outline: 0;
-}
-#reservation form input:focus {
-    outline: 1px solid #278cae;
-}
-#reservation form input[type="submit"]{
-    margin-top: 15px;
-    color: #fff;
-    background-color: #278cae;
-    border: 1px solid #278cae;
 }
 
 /* footer CSS */
@@ -469,14 +387,7 @@ hr {
         text-align: center;
         padding: 20px;
     }
-    .comment_section {
-        height: auto;
-    }
-    .comment_section .comments  .comment{
-        width: 100%;
-        margin-top: 20px;
-    }
-    .services_list .service {
+       .services_list .service {
         padding: 0 50px;
     }
     .toggle_menu {
@@ -534,5 +445,6 @@ hr {
     header .menu.responsive li {
         margin: 15px 0;
     }
+   
 
 }
