@@ -5,9 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; 
 }
-section {
-    margin-top: 50px;
-}
+
 body {
     position: relative;
 }

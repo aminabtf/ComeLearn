@@ -235,7 +235,7 @@
         type="button"
         class="btn fs-4 text-secondary mx-auto d-grid gap-2 bg-info-subtle"
       >
-        Afficher plus de vidéos
+        Afficher toutes les vidéos
       </button>
     </section>
 
@@ -468,7 +468,7 @@
         // Check if all video cards have been loaded
         if ($(".video-card:hidden").length === 0) {
           // Hide the "Load More" button by setting style attribute
-          $("#loadmore").attr("style", "display: none");
+          $("#loadmore").remove();
         }
       });
     });

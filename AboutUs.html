@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ton site de formation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Envoyer un message</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <p><span>Come</span>Learn</p>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html#home">Acceuil</a></li>
+        <li><a href="index.html#menu">Formations</a></li>
+        <li><a href="#contact">Contactez-nous</a></li>
+      </ul>
+
+      <!-- menu responsive -->
+      <div class="toggle_menu"></div>
+    </header>
+
+    <!-- section about us -->
+    <section id="about_us">
+      <h4 class="mini_title">À Propos</h4>
+      <h2 class="title">Pourquoi nous choisir ?</h2>
+      <div class="about">
+        <div class="left">
+          <img src="images/aboutus.jfif" alt="À Propos de ComeLearn" />
+        </div>
+        <div class="right">
+          <h3>Des Formations de Qualité Supérieure</h3>
+          <p>
+            Chez ComeLearn, nous nous engageons à offrir aux enseignants les
+            meilleures formations en ligne. Notre équipe d'experts pédagogiques
+            conçoit des cours stimulants et pertinents pour vous aider à
+            exceller dans votre domaine.
+          </p>
+          <p>
+            Nous comprenons les défis auxquels les enseignants sont confrontés
+            aujourd'hui, c'est pourquoi nos formations sont spécialement conçues
+            pour répondre à vos besoins. Que vous cherchiez à maîtriser de
+            nouvelles technologies éducatives ou à perfectionner vos compétences
+            pédagogiques, ComeLearn est là pour vous accompagner.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section contact us -->
+    <section id="contact" class="bg-body-secondary py-5" style="padding: 200px">
+      <div
+        class="text-bg-dark p-5 container"
+        style="background-image: url(images/bgContact.jpg)"
+      >
+        <h4 class="mini_title text-center">CONTACTEZ-NOUS</h4>
+
+        <div class="container px-5 mx-auto">
+          <p class="py-3 fs-5 text-center">
+            Nous sommes ravis de vous entendre! Si vous avez des questions, des
+            commentaires ou si vous souhaitez en savoir plus sur nos services,
+            n'hésitez pas à nous contacter.
+          </p>
+
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+              <div class="row py-3">
+                <div class="col-md-3">
+                  <i
+                    class="text-dark bi bi-telephone bg-white rounded-circle border px-3 shadow-sm"
+                    style="font-size: 2rem"
+                  ></i>
+                </div>
+                <div class="col-md-9">
+                  <div class="row">Phone</div>
+                  <div class="row">+12100000000</div>
+                </div>
+              </div>
+
+              <div class="row py-3">
+                <div class="col-md-3">
+                  <i
+                    class="text-dark bi bi-envelope bg-white rounded-circle border px-3 shadow-sm"
+                    style="font-size: 2rem"
+                  ></i>
+                </div>
+                <div class="col-md-9">
+                  <div class="row">Email</div>
+                  <div class="row">ComeLearn@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="row py-3">
+                <div class="col-md-3">
+                  <i
+                    class="text-dark bi bi-instagram bg-white rounded-circle border px-3 shadow-sm"
+                    style="font-size: 2rem"
+                  ></i>
+                </div>
+                <div class="col-md-9">
+                  <div class="row">Instagram</div>
+                  <div class="row">ComeLearn</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 text-bg-light">
+              <section class="bg-body-default p-3">
+                <h2 class="py-3 r">Envoyer un message</h2>
+                <form id="myForm" action="">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Nom Complet</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput2" class="form-label"
+                      >Adresse Mail</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"
+                      >Message</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <button class="btn btn-info" id="liveToastBtn" type="submit">
+                    Envoyer
+                  </button>
+                </form>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div
+                    id="liveToast"
+                    class="toast"
+                    role="alert"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="toast-body">Message envoye avec succes</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const toastTrigger = document.getElementById("liveToastBtn");
+    const toastLiveExample = document.getElementById("liveToast");
+
+    $('button[type="submit"]').prop("disabled", true);
+
+    $("#email").keyup(function () {
+      var email = $(this).val();
+
+      if (validateEmail(email) && $("#message").val().length != 0) {
+        $('button[type="submit"]').prop("disabled", false);
+      } else {
+        $('button[type="submit"]').prop("disabled", true);
+      }
+    });
+
+    if (toastTrigger) {
+      const toastBootstrap =
+        bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+      toastTrigger.addEventListener("click", () => {
+        toastBootstrap.show();
+      });
+    }
+
+    function validateEmail(email) {
+      if (!email) return false;
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      return emailReg.test(email);
+    }
+  </script>
+</html>
