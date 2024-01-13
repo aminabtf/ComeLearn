@@ -182,13 +182,13 @@ header {
     margin-bottom: 25px;
     text-align: center;
 }
-.dishes {
+.courses {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     justify-content: space-around;
 }
-.dishes .dish {
+.courses .course {
     height: 280px;
     width: 30%;
     background-color: #fff;
@@ -203,17 +203,17 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
 }
-.dishes .dish  img {
+.courses .course  img {
     width: 130px;
     height: 120px;
     margin-bottom: 15px;
 }
-.dishes .dish p {
+.courses .course p {
     text-align: center;
     font-size: 18px;
 
 }
-.dishes .dish a {
+.courses .course a {
     margin-top: 10px;
     font-size: 14px;
     text-decoration: 0;
@@ -360,7 +360,7 @@ hr {
     #home .left p {
         font-size: 15px;
     }
-    #menu .dishes .dish {
+    #menu .courses .course {
         width: 100%;
         max-width: 260px;
     }
