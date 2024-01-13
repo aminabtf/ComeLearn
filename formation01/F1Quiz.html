@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #quiz-container {
+        max-width: 600px;
+        margin-top: 20px;
+      }
+
+      .card-header {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <title>Quiz sur le Leadership Pédagogique</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <p><span>Come</span>Learn</p>
+      </div>
+      <ul class="menu">
+        <li><a href="/index.html">Acceuil</a></li>
+        <li><a href="/index.html#menu">Formations</a></li>
+        <li><a href="/index.html#about_us">A Propos</a></li>
+      </ul>
+
+      <!-- menu responsive -->
+      <div class="toggle_menu"></div>
+    </header>
+    <!-- Quiz -->
+    <section class="p-5 mb-5">
+      <h4 class="mini_title text-center">Quiz sur le Leadership Pédagogique</h4>
+      <h2 class="title">Passer le quiz pour s'autoevaluer</h2>
+      <div class="container mx-5 my-5">
+        <div id="quiz-container" class="card">
+          <div id="question-container" class="card-body">
+            <!-- Les questions et réponses seront ajoutées ici dynamiquement -->
+          </div>
+          <button
+            id="submit-btn"
+            class="btn btn-primary"
+            onclick="submitQuiz()"
+          >
+            Soumettre
+          </button>
+          <div id="result-container" class="card-footer"></div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="2rem">
+      <div class="services_list">
+        <i
+          class="text-dark bi bi-envelope bg-white rounded-circle border px-3 shadow-sm mx-auto my-auto"
+          style="font-size: 2rem"
+        ></i>
+        <div class="service">
+          <h2>Emails</h2>
+          <p>ComeLearn@gmail.com</p>
+          <p>FirstFlame@gmail.com</p>
+        </div>
+        <i
+          class="text-dark bi bi-telephone bg-white rounded-circle border px-3 shadow-sm mx-auto my-auto"
+          style="font-size: 2rem"
+        ></i>
+        <div class="service">
+          <h2>Numbers</h2>
+          <p>+212 0000000</p>
+          <p>+212 0000000</p>
+        </div>
+
+        <hr />
+      </div>
+
+      <p class="footer_text">
+        Réalisé par <span>First Flame</span> | Tous les droits sont réservés.
+      </p>
+    </footer>
+    <script>
+      const quizData = [
+        {
+          question:
+            "Pourquoi l'utilisation de la technologie en classe est-elle devenue de plus en plus nécessaire selon la déclaration donnée ?",
+          answers: {
+            a: "Pour suivre les tendances à la mode",
+            b: "Pour remplacer complètement les méthodes d'enseignement traditionnelles",
+            c: "Pour rendre l'apprentissage plus interactif et engageant",
+            d: "Pour réduire les coûts éducatifs",
+          },
+          correctAnswer: "c",
+        },
+        {
+          question:
+            "Quel est l'impact de l'utilisation de la technologie sur les techniques d'enseignement ?",
+          answers: {
+            a: "Aucun impact",
+            b: "Elle a rendu obsolètes les méthodes traditionnelles",
+            c: "Elle a diversifié les approches pédagogiques",
+            d: "Elle a augmenté la charge de travail des enseignants",
+          },
+          correctAnswer: "c",
+        },
+        {
+          question:
+            "Quels sont les avantages potentiels de l'utilisation de la technologie en classe ?",
+          answers: {
+            a: "Réduction de l'interaction entre les élèves",
+            b: "Amélioration de la collaboration et de la communication",
+            c: "Diminution de l'engagement des élèves",
+            d: "Limitation de l'accès à l'information",
+          },
+          correctAnswer: "b",
+        },
+        {
+          question:
+            "Pourquoi l'utilisation de la technologie est-elle considérée comme nécessaire dans l'enseignement moderne ?",
+          answers: {
+            a: "Uniquement pour suivre les tendances",
+            b: "Elle offre des possibilités d'apprentissage plus riches",
+            c: "Elle facilite la surveillance des élèves",
+            d: "Elle simplifie le travail des enseignants",
+          },
+          correctAnswer: "b",
+        },
+        {
+          question:
+            "Quelle est la tendance générale en ce qui concerne l'utilisation de la technologie en éducation ?",
+          answers: {
+            a: "Elle est en déclin",
+            b: "Elle est restée inchangée au fil des ans",
+            c: "Elle est en constante évolution et de plus en plus intégrée",
+            d: "Elle est uniquement adoptée par les écoles privées",
+          },
+          correctAnswer: "c",
+        },
+      ];
+
+      const questionContainer = document.getElementById("question-container");
+      const resultContainer = document.getElementById("result-container");
+      const submitButton = document.getElementById("submit-btn");
+
+      function buildQuiz() {
+        quizData.forEach((question, index) => {
+          const questionElement = document.createElement("div");
+          questionElement.classList.add("question", "mb-3");
+          questionElement.innerHTML = `<p>${index + 1}. ${
+            question.question
+          }</p>`;
+
+          for (const [option, text] of Object.entries(question.answers)) {
+            questionElement.innerHTML += `<div class="form-check">
+                        <input class="form-check-input" type="radio" name="question${index}" id="${option}" value="${option}">
+                        <label class="form-check-label" for="${option}">
+                            ${text}
+                        </label>
+                    </div>`;
+          }
+
+          questionContainer.appendChild(questionElement);
+        });
+      }
+
+      function submitQuiz() {
+        const answerContainers =
+          questionContainer.querySelectorAll(".question");
+        let score = 0;
+
+        quizData.forEach((question, index) => {
+          const answerContainer = answerContainers[index];
+          const selectedInput = answerContainer.querySelector(
+            `input[name="question${index}"]:checked`
+          );
+
+          if (selectedInput) {
+            const selectedAnswer = selectedInput.value;
+            if (selectedAnswer === question.correctAnswer) {
+              score++;
+              answerContainer.style.color = "green";
+            } else {
+              answerContainer.style.color = "red";
+            }
+          }
+        });
+
+        resultContainer.innerHTML = `<p>Votre score : ${score} / ${quizData.length}</p>`;
+      }
+
+      buildQuiz();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #quiz-container {
+        max-width: 600px;
+        margin-top: 20px;
+      }
+
+      .card-header {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <title>Quiz sur le Leadership Pédagogique</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <p><span>Come</span>Learn</p>
+      </div>
+      <ul class="menu">
+        <li><a href="/index.html">Acceuil</a></li>
+        <li><a href="/index.html#menu">Formations</a></li>
+        <li><a href="/index.html#about_us">A Propos</a></li>
+      </ul>
+
+      <!-- menu responsive -->
+      <div class="toggle_menu"></div>
+    </header>
+    <!-- Quiz -->
+    <section class="p-5 mb-5">
+      <h4 class="mini_title text-center">Quiz sur le Leadership Pédagogique</h4>
+      <h2 class="title">Passer le quiz pour s'autoevaluer</h2>
+      <div class="container mx-5 my-5">
+        <div id="quiz-container" class="card">
+          <div id="question-container" class="card-body">
+            <!-- Les questions et réponses seront ajoutées ici dynamiquement -->
+          </div>
+          <button
+            id="submit-btn"
+            class="btn btn-primary"
+            onclick="submitQuiz()"
+          >
+            Soumettre
+          </button>
+          <div id="result-container" class="card-footer"></div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="2rem">
+      <div class="services_list">
+        <i
+          class="text-dark bi bi-envelope bg-white rounded-circle border px-3 shadow-sm mx-auto my-auto"
+          style="font-size: 2rem"
+        ></i>
+        <div class="service">
+          <h2>Emails</h2>
+          <p>ComeLearn@gmail.com</p>
+          <p>FirstFlame@gmail.com</p>
+        </div>
+        <i
+          class="text-dark bi bi-telephone bg-white rounded-circle border px-3 shadow-sm mx-auto my-auto"
+          style="font-size: 2rem"
+        ></i>
+        <div class="service">
+          <h2>Numbers</h2>
+          <p>+212 0000000</p>
+          <p>+212 0000000</p>
+        </div>
+
+        <hr />
+      </div>
+
+      <p class="footer_text">
+        Réalisé par <span>First Flame</span> | Tous les droits sont réservés.
+      </p>
+    </footer>
+    <script>
+      const quizData = [
+        {
+          question:
+            "Qu'est-ce que le leadership pédagogique selon la déclaration donnée ?",
+          answers: {
+            a: "Fournir un enseignement de qualité",
+            b: "Assurer un accès équitable à l'éducation",
+            c: "Atteindre les résultats d'apprentissage du programme d'études",
+            d: "Toutes les réponses ci-dessus",
+          },
+          correctAnswer: "d",
+        },
+        {
+          question: "Quel est l'objectif principal du leadership pédagogique ?",
+          answers: {
+            a: "Obtenir des promotions pour les enseignants",
+            b: "Améliorer la qualité de l'enseignement",
+            c: "Assurer l'égalité des chances pour tous les élèves",
+            d: "A et B",
+          },
+          correctAnswer: "c",
+        },
+        {
+          question:
+            "Quels sont les éléments clés du leadership pédagogique d'après la déclaration ?",
+          answers: {
+            a: "Régulier accès à un enseignement de qualité",
+            b: "Apprentissage nécessaire pour atteindre les résultats",
+            c: "Suivi des performances des élèves",
+            d: "Toutes les réponses ci-dessus",
+          },
+          correctAnswer: "d",
+        },
+        {
+          question: "Pourquoi le leadership pédagogique est-il important ?",
+          answers: {
+            a: "Obtenir des promotions pour les enseignants",
+            b: "Garantir l'équité dans l'accès à l'éducation",
+            c: "Assurer un enseignement de grande qualité",
+            d: "A et B",
+          },
+          correctAnswer: "b",
+        },
+        {
+          question:
+            "Quel est le rôle du leadership pédagogique dans les écoles ?",
+          answers: {
+            a: "Superviser les enseignants",
+            b: "Promouvoir l'amélioration continue de l'enseignement",
+            c: "Faciliter la collaboration entre les enseignants",
+            d: "Toutes les réponses ci-dessus",
+          },
+          correctAnswer: "d",
+        },
+      ];
+
+      const questionContainer = document.getElementById("question-container");
+      const resultContainer = document.getElementById("result-container");
+      const submitButton = document.getElementById("submit-btn");
+
+      function buildQuiz() {
+        quizData.forEach((question, index) => {
+          const questionElement = document.createElement("div");
+          questionElement.classList.add("question", "mb-3");
+          questionElement.innerHTML = `<p>${index + 1}. ${
+            question.question
+          }</p>`;
+
+          for (const [option, text] of Object.entries(question.answers)) {
+            questionElement.innerHTML += `<div class="form-check">
+                        <input class="form-check-input" type="radio" name="question${index}" id="${option}" value="${option}">
+                        <label class="form-check-label" for="${option}">
+                            ${text}
+                        </label>
+                    </div>`;
+          }
+
+          questionContainer.appendChild(questionElement);
+        });
+      }
+
+      function submitQuiz() {
+        const answerContainers =
+          questionContainer.querySelectorAll(".question");
+        let score = 0;
+
+        quizData.forEach((question, index) => {
+          const answerContainer = answerContainers[index];
+          const selectedInput = answerContainer.querySelector(
+            `input[name="question${index}"]:checked`
+          );
+
+          if (selectedInput) {
+            const selectedAnswer = selectedInput.value;
+            if (selectedAnswer === question.correctAnswer) {
+              score++;
+              answerContainer.style.color = "green";
+            } else {
+              answerContainer.style.color = "red";
+            }
+          }
+        });
+
+        resultContainer.innerHTML = `<p>Votre score : ${score} / ${quizData.length}</p>`;
+      }
+
+      buildQuiz();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
